@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   basePath: '/zylo-global',
@@ -12,7 +11,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+};
 
 export default nextConfig
 
