@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/zylo-global',
+  assetPrefix: '/zylo-global',
   eslint: {
     ignoreDuringBuilds: true,
   },
