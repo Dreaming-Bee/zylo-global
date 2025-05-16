@@ -76,11 +76,13 @@ jobs:
           # Temporarily downgrade React to v18 for build
           npm pkg set dependencies.react="^18.2.0"
           npm pkg set dependencies.react-dom="^18.2.0"
-          
+
       - name: Install dependencies
         run: npm install --force
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: npm run build
+      - name: Copy .nojekyll file
+        run: cp .nojekyll ./out/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
