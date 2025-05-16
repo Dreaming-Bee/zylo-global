@@ -50,7 +50,7 @@ const Footer = () => {
               Zylo Global is a premium social media marketing agency dedicated to helping brands achieve exceptional
               growth through strategic, data-driven approaches.
             </p>
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <h4 className="text-white font-medium mb-3">Subscribe to our newsletter</h4>
               <div className="flex gap-2">
                 <Input
@@ -62,7 +62,7 @@ const Footer = () => {
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {footerLinks.map((column, idx) => (
