@@ -3,6 +3,11 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 
+// This ensures the projects page is included in the static export
+export function generateStaticParams() {
+  return []
+}
+
 export default function ProjectsPage() {
   // Get the basePath from the environment or use a default for GitHub Pages
   const basePath = process.env.NODE_ENV === 'production' ? '/zylo-global' : '';
@@ -111,7 +116,7 @@ export default function ProjectsPage() {
                   <span className="text-gold text-sm uppercase tracking-wider mb-2">{project.category}</span>
                   <h3 className="text-xl font-serif font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{project.description}</p>
-                  <Link href={`${basePath}/projects/${project.id}`}>
+                  <Link href={`${basePath}/projects/${project.id}/`}>
                     <Button
                       variant="outline"
                       size="sm"

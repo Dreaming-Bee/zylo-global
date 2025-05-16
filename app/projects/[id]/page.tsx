@@ -299,7 +299,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 		<div className="bg-black min-h-screen pt-24 pb-20">
 			<div className="container mx-auto px-4 md:px-6">
 				<div className="flex items-center mb-12">
-					<Link href={`${basePath}/projects`}>
+					<Link href={`${basePath}/projects/`}>
 						<Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black">
 							<ArrowLeft className="mr-2 h-4 w-4" />
 							Back to Projects
@@ -390,7 +390,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 				</div>
 
 				<div className="flex justify-between">
-					<Link href={`${basePath}/projects`}>
+					<Link href={`${basePath}/projects/`}>
 						<Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black">
 							<ArrowLeft className="mr-2 h-4 w-4" />
 							All Projects

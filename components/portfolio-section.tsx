@@ -130,7 +130,7 @@ const PortfolioSection = () => {
                 <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-gold text-sm uppercase tracking-wider mb-2">{project.category}</span>
                   <h3 className="text-xl font-serif font-bold text-white mb-4">{project.title}</h3>
-                  <Link href={`${basePath}/projects/${project.id}`}>
+                  <Link href={`${basePath}/projects/${project.id}/`}>
                     <Button
                       variant="outline"
                       size="sm"
@@ -146,7 +146,7 @@ const PortfolioSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Link href={`${basePath}/projects`}>
+          <Link href={`${basePath}/projects/`}>
             <Button className="bg-transparent hover:bg-transparent text-gold hover:text-gold-light border-2 border-gold hover:border-gold-light px-8 py-6 text-lg">
               View All Projects
               <ArrowRight className="ml-2 h-5 w-5" />
