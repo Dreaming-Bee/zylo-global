@@ -5,6 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import Script from "next/script"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -39,6 +40,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script id="github-pages-spa-redirect" strategy="beforeInteractive">
+          {`
+            (function(l) {
+              if (l.search[1] === '/' ) {
+                var decoded = l.search.slice(1).split('&').map(function(s) {
+                  return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+              }
+            }(window.location))
+          `}
+        </Script>
+      </head>
       <body
         className={`${playfair.variable} ${inter.variable} font-sans bg-black text-white min-h-screen flex flex-col`}
       >
