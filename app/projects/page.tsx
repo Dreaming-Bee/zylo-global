@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 
 export default function ProjectsPage() {
+  // Get the basePath from the environment or use a default for GitHub Pages
+  const basePath = process.env.NODE_ENV === 'production' ? '/zylo-global' : '';
   const projects = [
     {
       id: "luxury-fashion-brand",
@@ -77,7 +79,7 @@ export default function ProjectsPage() {
     <div className="bg-black min-h-screen pt-24 pb-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center mb-12">
-          <Link href="/#portfolio">
+          <Link href={`${basePath}/#portfolio`}>
             <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Home
@@ -109,7 +111,7 @@ export default function ProjectsPage() {
                   <span className="text-gold text-sm uppercase tracking-wider mb-2">{project.category}</span>
                   <h3 className="text-xl font-serif font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{project.description}</p>
-                  <Link href={`/projects/${project.id}`}>
+                  <Link href={`${basePath}/projects/${project.id}`}>
                     <Button
                       variant="outline"
                       size="sm"

@@ -7,35 +7,38 @@ import { Input } from "@/components/ui/input"
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
+  // Get the basePath from the environment or use a default for GitHub Pages
+  const basePath = process.env.NODE_ENV === 'production' ? '/zylo-global' : '';
+
   const footerLinks = [
     {
       title: "Company",
       links: [
-        { label: "About Us", href: "#about" },
-        { label: "Services", href: "#services" },
-        { label: "Portfolio", href: "#portfolio" },
-        { label: "Blog", href: "#blog" },
-        { label: "Contact", href: "#contact" },
+        { label: "About Us", href: `${basePath}/#about` },
+        { label: "Services", href: `${basePath}/#services` },
+        { label: "Portfolio", href: `${basePath}/#portfolio` },
+        { label: "Blog", href: `${basePath}/#blog` },
+        { label: "Contact", href: `${basePath}/#contact` },
       ],
     },
     {
       title: "Services",
       links: [
-        { label: "Content Creation", href: "#" },
-        { label: "Paid Advertising", href: "#" },
-        { label: "Strategy Development", href: "#" },
-        { label: "Analytics & Reporting", href: "#" },
-        { label: "Brand Development", href: "#" },
+        { label: "Content Creation", href: `${basePath}/#services` },
+        { label: "Paid Advertising", href: `${basePath}/#services` },
+        { label: "Strategy Development", href: `${basePath}/#services` },
+        { label: "Analytics & Reporting", href: `${basePath}/#services` },
+        { label: "Brand Development", href: `${basePath}/#services` },
       ],
     },
     {
       title: "Resources",
       links: [
-        { label: "Case Studies", href: "#" },
-        { label: "Blog Articles", href: "#" },
-        { label: "Guides & Ebooks", href: "#" },
-        { label: "Webinars", href: "#" },
-        { label: "FAQ", href: "#" },
+        { label: "Case Studies", href: `${basePath}/#portfolio` },
+        { label: "Blog Articles", href: `${basePath}/#blog` },
+        { label: "Guides & Ebooks", href: `${basePath}/#blog` },
+        { label: "Webinars", href: `${basePath}/#blog` },
+        { label: "FAQ", href: `${basePath}/#contact` },
       ],
     },
   ]
@@ -84,13 +87,13 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">&copy; {currentYear} Zylo Global. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
-            <Link href="#" className="text-gray-500 hover:text-gold text-sm transition-colors duration-300">
+            <Link href={`${basePath}/#`} className="text-gray-500 hover:text-gold text-sm transition-colors duration-300">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-500 hover:text-gold text-sm transition-colors duration-300">
+            <Link href={`${basePath}/#`} className="text-gray-500 hover:text-gold text-sm transition-colors duration-300">
               Terms of Service
             </Link>
-            <Link href="#" className="text-gray-500 hover:text-gold text-sm transition-colors duration-300">
+            <Link href={`${basePath}/#`} className="text-gray-500 hover:text-gold text-sm transition-colors duration-300">
               Sitemap
             </Link>
           </div>

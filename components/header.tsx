@@ -3,10 +3,15 @@
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import Logo from "@/components/logo"
+import { usePathname } from "next/navigation"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+
+  // Get the basePath from the environment or use a default for GitHub Pages
+  const basePath = process.env.NODE_ENV === 'production' ? '/zylo-global' : '';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,15 +29,18 @@ const Header = () => {
   const handleNavClick = (id: string) => {
     setIsMenuOpen(false)
 
-    // If we're on the homepage, scroll to the section
-    if (window.location.pathname === "/" || window.location.pathname === "") {
+    // Check if we're on the homepage by comparing with the basePath
+    const isHomePage = pathname === '/' || pathname === basePath || pathname === `${basePath}/`;
+
+    if (isHomePage) {
+      // If we're on the homepage, scroll to the section
       const element = document.getElementById(id)
       if (element) {
         element.scrollIntoView({ behavior: "smooth" })
       }
     } else {
       // If we're on another page, navigate to homepage with hash
-      window.location.href = `/#${id}`
+      window.location.href = `${basePath}/#${id}`
     }
   }
 
