@@ -38,21 +38,21 @@ const TestimonialsSection = () => {
     {
       quote:
         "Zylo Global transformed our social media presence completely. Their strategic approach and creative content have driven exceptional engagement and conversion rates for our brand.",
-      name: "Sarah Nimna umar",
+      name: "Kumari Perera",
       title: "Marketing Director, Luxury Retail Brand",
       image: "/placeholder.svg?height=200&width=200",
     },
     {
       quote:
         "Working with Zylo has been a game-changer for our startup. Their data-driven strategies helped us establish a strong social media presence from day one, resulting in rapid growth.",
-      name: "Michael Chen",
+      name: "Dinesh Jayawardena",
       title: "CEO, Tech Startup",
       image: "/placeholder.svg?height=200&width=200",
     },
     {
       quote:
         "The team at Zylo Global consistently delivers exceptional results. Their deep understanding of our industry and audience has made them an invaluable partner in our marketing efforts.",
-      name: "Jessica Williams",
+      name: "Priyanka Bandara",
       title: "Brand Manager, Consumer Goods",
       image: "/placeholder.svg?height=200&width=200",
     },
@@ -135,3 +135,5 @@ const TestimonialsSection = () => {
 }
 
 export default TestimonialsSection
+
+
