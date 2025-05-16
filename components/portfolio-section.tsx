@@ -10,8 +10,8 @@ const PortfolioSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [activeFilter, setActiveFilter] = useState("All")
 
-  // Get the basePath from the environment or use a default for GitHub Pages
-  const basePath = process.env.NODE_ENV === 'production' ? '/zylo-global' : '';
+  // Use the basePath from next.config.mjs
+  const basePath = '/zylo-global';
 
   useEffect(() => {
     const observer = new IntersectionObserver(

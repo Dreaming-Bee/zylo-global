@@ -9,8 +9,8 @@ export function generateStaticParams() {
 }
 
 export default function ProjectsPage() {
-  // Get the basePath from the environment or use a default for GitHub Pages
-  const basePath = process.env.NODE_ENV === 'production' ? '/zylo-global' : '';
+  // Use the basePath from next.config.mjs
+  const basePath = '/zylo-global';
   const projects = [
     {
       id: "luxury-fashion-brand",
