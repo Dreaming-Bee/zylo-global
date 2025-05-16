@@ -278,6 +278,13 @@ const projectsData = [
   },
 ]
 
+// Generate static params for all project IDs
+export function generateStaticParams() {
+  return projectsData.map((project) => ({
+    id: project.id,
+  }))
+}
+
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const project = projectsData.find((p) => p.id === params.id)
 
