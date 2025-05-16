@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',
   basePath: '/zylo-global',
   assetPrefix: '/zylo-global',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
