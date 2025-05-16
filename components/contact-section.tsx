@@ -70,13 +70,13 @@ const ContactSection = () => {
     {
       icon: <Phone className="h-6 w-6 text-gold" />,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      details: "+94 11 234 5678",
+      link: "tel:+94112345678",
     },
     {
       icon: <MapPin className="h-6 w-6 text-gold" />,
       title: "Visit Us",
-      details: "123 Madison Avenue, New York, NY 10001",
+      details: "42 Galle Road, Colombo 03, Sri Lanka",
       link: "https://maps.google.com",
     },
   ]
@@ -225,3 +225,4 @@ const ContactSection = () => {
 }
 
 export default ContactSection
+

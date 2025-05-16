@@ -32,7 +32,7 @@ const projectsData = [
     testimonial: {
       quote:
         "Zylo Global transformed our social media presence completely. Their strategic approach and creative content have driven exceptional engagement and conversion rates for our brand.",
-      name: "Sarah Johnson",
+      name: "Kumari Perera",
       title: "Marketing Director, Elegance Couture",
     },
   },
@@ -62,7 +62,7 @@ const projectsData = [
     testimonial: {
       quote:
         "Working with Zylo has been a game-changer for our startup. Their data-driven strategies helped us establish a strong social media presence from day one, resulting in rapid growth.",
-      name: "Michael Chen",
+      name: "Dinesh Jayawardena",
       title: "CEO, InnovateTech",
     },
   },
@@ -92,7 +92,7 @@ const projectsData = [
     testimonial: {
       quote:
         "The content series created by Zylo Global exceeded our expectations. The creative approach and strategic distribution helped us connect with our audience in meaningful ways.",
-      name: "Jessica Williams",
+      name: "Priyanka Bandara",
       title: "Brand Manager, Flavor Fusion",
     },
   },
@@ -122,7 +122,7 @@ const projectsData = [
     testimonial: {
       quote:
         "Zylo Global's rebrand of our social media presence has completely transformed how our clients and prospects perceive us. The results speak for themselves.",
-      name: "Robert Thompson",
+      name: "Rohan Gunawardena",
       title: "CMO, Secure Wealth Management",
     },
   },
@@ -152,7 +152,7 @@ const projectsData = [
     testimonial: {
       quote:
         "The campaign Zylo Global created helped us navigate one of the most challenging periods in the travel industry. Their strategic approach directly contributed to our recovery.",
-      name: "Emma Rodriguez",
+      name: "Amali Fernando",
       title: "Marketing Director, Wanderlust Adventures",
     },
   },
@@ -182,7 +182,7 @@ const projectsData = [
     testimonial: {
       quote:
         "Zylo Global's strategic approach to healthcare social media has helped us build meaningful connections with our community while navigating complex regulatory requirements.",
-      name: "Dr. James Wilson",
+      name: "Dr. Nimal Dissanayake",
       title: "CEO, Wellness Medical Group",
     },
   },
@@ -212,7 +212,7 @@ const projectsData = [
     testimonial: {
       quote:
         "The holiday campaign exceeded all our expectations. Zylo Global's strategic approach and creative execution delivered exceptional results during our most critical sales period.",
-      name: "Alex Martinez",
+      name: "Asanka Silva",
       title: "Digital Marketing Manager, Urban Style Co.",
     },
   },
@@ -242,7 +242,7 @@ const projectsData = [
     testimonial: {
       quote:
         "Zylo Global's content series perfectly balanced technical information with engaging storytelling. They helped us connect with a new generation of customers without alienating our core audience.",
-      name: "Thomas Weber",
+      name: "Tharaka Weerasinghe",
       title: "Marketing Director, Precision Motors",
     },
   },
@@ -272,7 +272,7 @@ const projectsData = [
     testimonial: {
       quote:
         "The brand refresh by Zylo Global has completely transformed our digital presence. They understood our heritage and helped us evolve for today's travelers without losing our identity.",
-      name: "Sophia Chang",
+      name: "Dilini Rajapaksa",
       title: "Brand Director, Serenity Hotels & Resorts",
     },
   },
@@ -397,3 +397,6 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     </div>
   )
 }
+
+
+
