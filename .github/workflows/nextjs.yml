@@ -1,0 +1,77 @@
+name: Next.js CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build
+      run: npm run build
+      env:
+        CI: true
+        
+    - name: Lint
+      run: npm run lint
+      
+    # Uncomment if you have tests
+    # - name: Test
+    #   run: npm test
+      
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build
+      run: npm run build
+      env:
+        CI: true
+        
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: out # The folder the action should deploy
+        branch: gh-pages # The branch the action should deploy to
+        
+    # Replace Vercel deployment with GitHub Pages setup
+    - name: Configure for GitHub Pages
+      run: |
+        # Add "export" to package.json scripts
+        npm pkg set scripts.export="next export"
+        # Run the export command to generate static files
+        npm run build && npm run export
+   
