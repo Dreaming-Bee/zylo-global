@@ -10,18 +10,18 @@
     // This script takes the current URL and converts the path and query
     // string into just a query string, and then redirects the browser
     // to the new URL with only a query string and hash fragment.
-    
+
     // If you're creating a Project Pages site and NOT using a custom domain,
     // then set pathSegmentsToKeep to 1 (enterprise users may need to set it to > 1).
     var pathSegmentsToKeep = 1;
 
     var l = window.location;
     var repoName = '/zylo-global'; // Update this to your repository name
-    
+
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-      repoName.split('/').slice(0, pathSegmentsToKeep + 1).join('/') + '/?/' +
-      l.pathname.slice(repoName.length).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      repoName + '/?/' +
+      l.pathname.slice(repoName.length + 1).replace(/&/g, '~and~') +
       (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
       l.hash
     );
