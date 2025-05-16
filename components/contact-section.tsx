@@ -123,7 +123,7 @@ const ContactSection = () => {
                         onChange={handleChange}
                         required
                         className="bg-gray-800 border-gray-700 focus:border-gold focus:ring-gold"
-                        placeholder="John Doe"
+                        placeholder="Nimna umar "
                       />
                     </div>
                     <div>
@@ -138,7 +138,7 @@ const ContactSection = () => {
                         onChange={handleChange}
                         required
                         className="bg-gray-800 border-gray-700 focus:border-gold focus:ring-gold"
-                        placeholder="john@example.com"
+                        placeholder="Nimna umar@example.com"
                       />
                     </div>
                   </div>

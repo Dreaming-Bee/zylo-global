@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
     {
       quote:
         "Zylo Global transformed our social media presence completely. Their strategic approach and creative content have driven exceptional engagement and conversion rates for our brand.",
-      name: "Sarah Johnson",
+      name: "Sarah Nimna umar",
       title: "Marketing Director, Luxury Retail Brand",
       image: "/placeholder.svg?height=200&width=200",
     },
